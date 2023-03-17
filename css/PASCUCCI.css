@@ -1,0 +1,278 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: montserrat;
+}
+
+.photo{
+  width: 100%;
+  height: 100%;
+  background: #000;
+  text-align: center;
+}
+.intro img:hover{width: 100%;}
+
+.intro:before{
+  content: attr(data-text);
+  position: absolute;
+  color: #fff;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+
+header{
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  position: relative;
+  z-index: 100; 
+}
+
+nav{
+  position: relative; /* 왼쪽서브배경박스의 이미지 위치기준 */
+  width: 1400px;
+  height: inherit;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid #000; */
+}
+
+
+/* Main Menu */
+
+.logo{ /* logo */
+  width: 30%;
+  text-align: center;
+  justify-content: center;
+  margin: 22px 0;
+  /* border: 1px solid #000; */
+ }
+.gnb{
+  /* border: 1px solid yellow; */
+  width: 70%;
+  display: flex;
+  margin: auto;
+  text-align: center;
+  justify-content: space-around;
+ }
+
+
+
+.gnb>.main{
+  width: 80px;
+  text-align: center;
+}
+.gnb>.main>a{
+  /* border: 1px solid blue; */
+  position: relative;
+  display: block;
+  width: inherit;
+  height: 50px;
+  color: #000;
+  font-size: 20px;
+	font-weight: 600;
+  line-height: 50px;
+}
+.gnb>.main>a:hover{
+  color: crimson;
+}
+
+
+.main>a:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: crimson;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.main>a:hover:before{width: 100%;}
+
+
+/* .gnb>.main>a:after{ 
+  content: "\f0dd" ;
+  font-family: fontawesome;
+  position: absolute;
+  top: -2px;
+  right: 10px;
+  color: #7a8189;
+} */
+/* .gnb>.main:hover>a{} */
+/* .gnb>.main:hover>a:after {color: #fff;} */
+
+
+/* Sub Menu*/
+.sub_all{
+  display: none; /*  서브메뉴 감추기->jQuery에서 보이게 함 */
+  position:absolute;
+	top:100%; 
+  z-index: 200;
+  border-left:solid 1px crimson;
+  padding-top: 10px;
+  margin-left: -40px;
+	width:150px;
+	height:150px;
+  /* border: 1px solid #000; */
+}
+/* .last{border-right:solid 1px #e8e8e8;} */
+.sub_all li{
+  width: inherit;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+.sub_all li a {
+	color: #414141;
+	font-size: 16px;
+  font-weight: 500;
+}
+.sub_all li:hover a{
+  color: crimson;
+ 
+
+}
+
+/*100%서브배경박스*/
+.sub_bgbox{ 
+  display:none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+	width:100%;
+	height:260px; 
+	background: #fff;
+}
+
+/* 서브왼쪽배경이미지 */	
+.subBoxImg ul li{  /*모든 이미지를 한 위치에 겹쳐놓음*/
+  display:none;
+	position:absolute;
+	top:60px;
+	left:100px;
+  margin-top: 20px;
+	z-index:300;
+  /* border: 1px solid #000; */
+}
+.subBoxImg h3{
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  color:cornflowerblue;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+
+
+ /* 3.visual   메뉴2번_________________________  */
+
+ .fadeShow{
+  position:relative;
+  width: 100%;
+  height: 870px;
+  margin:auto;
+}
+
+/* (1)이미지 모두 동일한 위치, 안보이게 함 */
+.changeimg ul li{
+  display: none;
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 870px;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+
+/* (2)첫번째 이미지만 보임 */
+.changeimg ul li:first-child{display: block;}
+.changeimg ul li:nth-child(1){background-image: url(../image/visual_01.png);}
+.changeimg ul li:nth-child(2){background-image: url(../image/visual_02.png);}
+.changeimg ul li:nth-child(3){background-image: url(../image/visual_03.png);}
+.changeimg ul li:nth-child(4){background-image: url(../image/visual_04.png);}
+
+/* 하단버튼 */
+.fadeShow .btn{
+  position: absolute;
+  top: 60px;
+  left: 1700px;
+}
+.btn ul li{
+  float: left;
+  width: 10px;
+  height: 10px;
+  background: #727272;
+  border-radius: 50% 50%;
+  margin: 0 5px;
+  
+  cursor: pointer;
+}
+.btn ul li.active{
+  width: 50px;
+  border-radius: 5px 5px;
+  background: crimson;
+}
+
+/* 좌우버튼 */
+.icon{
+  font-size: 80px;
+  color: #fff;
+}
+.side_btn .lbtn{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  left:30px;
+  width:65px;
+  height: 65px;
+}
+.side_btn .lbtn:hover{opacity: 0.5;}
+
+.side_btn .rbtn{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  right:30px;
+  width:65px;
+  height: 65px;
+}
+.side_btn .rbtn:hover{opacity: 0.5;}
+
+
+/* 비주얼 텍스트 공통 */
+.changeimg ul li dl{
+  position: absolute;
+  top:160px;
+  left:100px;
+  color:#fff;
+}
+.changeimg ul li dl dt{font-size: 40px;}
+.changeimg ul li dl dt span{
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+.changeimg ul li dl dd:nth-of-type(1){
+  font-size: 14px;
+  color:#ddd;
+}
+.changeimg ul li dl dd:nth-of-type(2){
+  width: 150px;
+  height: 42px;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 42px;
+  font-size: 14px;
+  margin-top:20px;
+}
