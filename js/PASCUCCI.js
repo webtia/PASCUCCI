@@ -1,11 +1,11 @@
 $(document).ready(function () {
 
   /* 2메뉴-menu8 */
-  $(".gnb").hover(function(){ //주메뉴영역전체에 오버시 
-    $(this).find(".main .sub_all").stop().slideDown();
+  $("nav, .sub_bgbox").hover(function(){ //주메뉴영역전체에 오버시 
+    $('nav').find(".main .sub_all").stop().slideDown();
     $(".sub_bgbox").stop().slideDown();
   },function(){
-    $(this).find(".main .sub_all").stop().slideUp();
+    $('nav').find(".main .sub_all").stop().slideUp();
     $(".sub_bgbox").stop().slideUp();
   });
 
@@ -15,7 +15,7 @@ $(document).ready(function () {
     let oldimg = 0; //기존에 보이는 이미지
     let newimg = $(this).index(); //새로 바뀌는 이미지
 
-    $(this).find(".sub_all").css({ "background": "#dbe4ea"});
+    $(this).find(".sub_all").css({ "background": "rgba(254, 199, 209, 0.3)"});
 
     $(".subBoxImg ul li").eq(oldimg).stop().hide("slow"); //기존이미지는 숨기기
     $(".subBoxImg ul li").eq(newimg).stop().show("slow"); //새로 선택된 이미지는 보이기
