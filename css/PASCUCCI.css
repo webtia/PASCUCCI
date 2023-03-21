@@ -34,7 +34,8 @@ header{
 
 nav{
   position: relative; /* 왼쪽서브배경박스의 이미지 위치기준 */
-  width: 1400px;
+  width: 100%;
+   max-width: 1920px;
   height: inherit;
   margin: auto;
   display: flex;
@@ -374,6 +375,9 @@ section{
 .big_box{
   display: flex;
   margin: 0px 20px;
+  align-content: center;
+ justify-content: center;
+ align-items: center;
 }
 
 .lbox{
@@ -394,6 +398,9 @@ section{
   width: 60%;
   height: 500px;
   border: 1px solid #000;
-  background: url(../image/rbox_01.jpg) no-repeat center;
+  background: url(../image/rbox_01.png) no-repeat center;
+ top: 20%;
+ left: 0px;
+ 
 }
 
