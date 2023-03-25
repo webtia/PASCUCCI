@@ -1,0 +1,46 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+  font-family: 'Montserrat', sans-serif; 
+ }
+
+ header {
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  position: relative;
+  z-index: 100;
+}
+
+nav {
+  position: relative;
+  /* 왼쪽서브배경박스의 이미지 위치기준 */
+  width: 100%;
+  max-width: 1920px;
+  height: inherit;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  /* border: 1px solid #000; */
+}
+
+.blank {
+  width: 100%;
+  height: 150px;
+  background: #fff;
+}
+
+section {
+  position: relative;
+}
+
+
+
+
+
+.title{
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}

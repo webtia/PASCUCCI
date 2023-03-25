@@ -1,0 +1,220 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: montserrat;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  text-align: center;
+}
+
+.intro img:hover {
+  width: 100%;
+}
+
+.intro:before {
+  content: attr(data-text);
+  position: absolute;
+  color: #fff;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  position: relative;
+  z-index: 100;
+}
+
+nav {
+  position: relative;
+  /* 왼쪽서브배경박스의 이미지 위치기준 */
+  width: 100%;
+  max-width: 1400px;
+  height: inherit;
+  margin: 0 auto;
+  clear: both;
+  /* border: 1px solid #000; */
+}
+
+.blank {
+  width: 100%;
+  height: 150px;
+  background: #fff;
+}
+
+section {
+  position: relative;
+}
+
+/* Main Menu */
+
+.logo {
+  /* logo */
+  width: auto;
+  text-align: center;
+  justify-content: center;
+  margin: 22px 0;
+  float: left;
+  /* border: 1px solid #000; */
+}
+
+.gnb {
+  /* border: 1px solid yellow; */
+  /* width: 50%; */
+  display: flex;
+  float: right;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.gnb>.main {
+  position: relative;
+  width: 100px;
+  margin: 0 50px;
+  text-align: center;
+}
+
+.gnb>.main>a {
+  /* border: 1px solid blue; */
+  position: relative;
+  display: block;
+  width: inherit;
+  height: 80px;
+  color: #000;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 80px;
+}
+
+.gnb>.main>a:hover {
+  color: crimson;
+}
+
+.main>a:before {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: crimson;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+.main:hover>a:before {
+  width: 100%;
+}
+
+
+
+/* .gnb>.main>a:after{ 
+  content: "\f0dd" ;
+  font-family: fontawesome;
+  position: absolute;
+  top: -2px;
+  right: 10px;
+  color: #7a8189;
+} */
+/* .gnb>.main:hover>a{} */
+/* .gnb>.main:hover>a:after {color: #fff;} */
+
+
+/* Sub Menu*/
+.sub_all {
+  display: none;
+  /*  서브메뉴 감추기->jQuery에서 보이게 함 */
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  padding-top: 10px;
+  width: 150px;
+  height: 150px;
+  /* border: 1px solid #000; */
+}
+
+
+/* .sub_all:before{
+  content: '';
+  position: absolute;
+  display: block;
+  background: crimson;
+  width: 1px;
+  height: 0px;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.main:hover .sub_all:before{
+  height: 100%;
+} */
+
+/* .last{border-right:solid 1px #e8e8e8;} */
+.sub_all li {
+  width: inherit;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.sub_all li a {
+  color: #414141;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sub_all li:hover a {
+  color: crimson;
+}
+
+/*100%서브배경박스*/
+.sub_bgbox {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 230px;
+  background: #fff;
+}
+
+/* 서브왼쪽배경이미지 */
+.subBoxImg ul li {
+  /*모든 이미지를 한 위치에 겹쳐놓음*/
+  display: none;
+  /* display: flex; */
+  position: absolute;
+  top: 60px;
+  left: 0;
+  margin-top: 20px;
+  z-index: 300;
+  /* border: 1px solid #000; */
+}
+
+.sub_rbox01 h4 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  color: #e1002b;
+  text-transform: capitalize;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.sub_rbox01 p {
+  margin-bottom: 8px;
+}

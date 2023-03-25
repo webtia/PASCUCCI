@@ -1,0 +1,505 @@
+@import url(header.css);
+@import url(footer.css);
+
+/* 3.visual   메뉴2번_________________________  */
+
+.fadeShow {
+  position: relative;
+  width: 100%;
+  height: 870px;
+  margin: auto;
+}
+
+/* (1)이미지 모두 동일한 위치, 안보이게 함 */
+.changeimg ul li {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 870px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* (2)첫번째 이미지만 보임 */
+.changeimg ul li:first-child {
+  display: block;
+}
+
+.changeimg ul li:nth-child(1) {
+  background-image: url(../image/visual_01.png);
+}
+
+.changeimg ul li:nth-child(2) {
+  background-image: url(../image/visual_02.png);
+}
+
+.changeimg ul li:nth-child(3) {
+  background-image: url(../image/visual_03.png);
+}
+
+.changeimg ul li:nth-child(4) {
+  background-image: url(../image/visual_04.png);
+}
+
+/* 하단버튼 */
+.fadeShow .btn {
+  position: absolute;
+  top: 60px;
+  left: 170px;
+}
+
+.btn ul li {
+  float: left;
+  width: 10px;
+  height: 10px;
+  background: #727272;
+  border-radius: 50% 50%;
+  margin: 0 5px;
+
+  cursor: pointer;
+}
+
+.btn ul li.active {
+  width: 50px;
+  border-radius: 5px 5px;
+  background: crimson;
+}
+
+/* 좌우버튼 */
+.icon {
+  font-size: 80px;
+  color: #fff;
+}
+
+.side_btn .lbtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+  width: 65px;
+  height: 65px;
+}
+
+.side_btn .lbtn:hover {
+  opacity: 0.5;
+}
+
+.side_btn .rbtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  width: 65px;
+  height: 65px;
+}
+
+.side_btn .rbtn:hover {
+  opacity: 0.5;
+}
+
+
+/* 비주얼 텍스트 공통 */
+.changeimg ul li dl {
+  position: absolute;
+  top: 160px;
+  left: 100px;
+  color: #fff;
+}
+
+.changeimg ul li dl dt {
+  font-size: 40px;
+}
+
+.changeimg ul li dl dt span {
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+
+.changeimg ul li dl dd:nth-of-type(1) {
+  font-size: 14px;
+  color: #ddd;
+}
+
+.changeimg ul li dl dd:nth-of-type(2) {
+  width: 150px;
+  height: 42px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 42px;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* main_02__________________________________________ */
+.big_box {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* border: 1px solid blue; */
+  width: 100%;
+  height: 100vh;
+}
+
+.lbox {
+  position: relative;
+  width: 60%;
+  height: inherit;
+  top: 0px;
+  left: 0px;
+  /* background: url(../image/lbox_01.jpg) no-repeat center; */
+  /* border: 1px solid red; */
+  top: 20%;
+  left: 0px;
+  text-align: center;
+}
+.lbox h2 {
+  display: block;
+  margin: 0px 100px;
+  line-height: 100px;
+  font-size: 80px;
+  color: #e1002b;
+}
+.lbox h3 {
+  display: block;
+  margin: 30px 20px ;
+  font-family: 'Noto Sans KR', sans-serif; 
+  font-weight: 500;
+    }
+
+
+.lbox p {
+  margin: 18px 0px;  
+  font-family: 'Noto Sans KR', sans-serif; 
+}
+
+.one {
+  position: absolute;
+  width: 40%;
+  height: inherit;
+  background: url(../image/one.png) no-repeat right center;
+  top: 0;
+  right: 0;
+  /* transform: translateX(-50%); */
+  /* border: 1px solid red; */
+}
+
+.rbox {
+  position: absolute;
+  top: -40px;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background: no-repeat center top 16% / cover;
+  overflow: hidden;
+  /* border: 1px solid #000; */
+}
+.rbox_01 {
+  background-image: url(../image/rbox_01.png);
+}
+.rbox_02 {
+  background-image: url(../image/rbox_02.png);
+}
+.rbox_main {
+  top: 50%;
+  right: 200px;
+  transform: translateY(-50%);
+  width: 600px;
+  height: 600px;
+}
+
+
+
+/* main_03__________________________________________ */
+.section_wrap {
+  display: flex;
+  /* background: red; */
+  /* background: #000; */
+}
+
+.section_inner1 {
+  position: relative;
+  padding: 7em 5em;
+  width: 50%;
+  aspect-ratio: 1100/937;
+  overflow: hidden;
+  /* 이미지 사이즈 719*844 */
+  /* border: 1px solid blue; */
+}
+
+.tab_visual{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.tab_visual .tab_bg{
+  position: absolute;
+  top: 0;
+  left: 110%;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.tab_visual .tab_bg.tab1{ background:url(../image/inner_bg_01.png);}
+.tab_visual .tab_bg.tab2{ background:url(../image/tab_visual_02.jpg);}
+.tab_visual .tab_bg.tab3{ background:url(../image/tab_visual_03.jpg);}
+.tab_visual .tab_bg.tab4{ background:url(../image/tab_visual_04.jpg);}
+
+.section_inner1 h2 {
+  font-size: 80px;
+  color: #e1002b;
+}
+
+.tab {
+  padding: 30px 20px 0;
+}
+
+.tab li+li {
+  margin-top: 10px;
+}
+.tab li a{
+  color: #414141;
+  font-size: 20px;
+  font-weight: 500;
+}
+.tab li a.on{
+  font-weight: 700;
+  cursor: default;
+}
+.tab li a:hover{
+  font-weight: 700;
+}
+
+.section_inner2{
+  position: relative;
+  padding: 7em 5em;
+  width: 50%;
+  aspect-ratio: 1100/937;
+  background: url(../image/inner_bg_02.png) no-repeat center / cover;
+}
+.section_inner2 li {
+  font-size: 40px;
+  font-weight: 700;
+  color: #414141;
+}
+.out{
+  position: absolute;
+  width: 400px;
+  height: 436px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.out img{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* .section_inner1 li {
+  color: #414141;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.section_inner1 li:nth-child(1) {
+  position: absolute;
+  top: 48%;
+  left: 15%;
+}
+
+.section_inner1 li:nth-child(2) {
+  position: absolute;
+  top: 51%;
+  left: 15%;
+}
+
+.section_inner1 li:nth-child(3) {
+  position: absolute;
+  top: 54%;
+  left: 15%;
+}
+
+.section_inner1 li:nth-child(4) {
+  position: absolute;
+  top: 57%;
+  left: 15%;
+}
+
+.section_inner1 li:hover {
+  font-weight: 700;
+
+} */
+
+
+
+/* main_04__________________________________________ */
+.sinsang{
+ 
+}
+.sinsang h1{
+text-align: center;
+font-size: 80px;
+margin: 80px 0px;
+color: #ffa459;
+}
+
+.sinsang_box{
+  display: flex;
+}
+
+.sinsang01{
+  background: url(../image/sinsang_01____.jpg) no-repeat center;
+  width: 100%;
+  height: 100vh;
+
+}
+/* .sinsang02{
+  background: url(../image/sinsang_02____.jpg) no-repeat center;
+  width: 50%;
+  height: 100vh;
+
+} */
+
+
+/* main_05__________________________________________ */
+.news{
+  position: relative;
+  display: flex;
+  border: 1px solid #9b9b9b;
+}
+
+.news_lbox{
+  width: 50%;
+  height: 750px;
+  margin: 30px;
+  border-right: 1px solid #9b9b9b;
+
+ }
+.news_lbox h1{
+  font-size: 80px;
+  top: 10%;
+  color: #e1002b;
+  margin: 30px 100px;
+}
+.news_rbox{
+  width: 50%;
+  height: 250px;
+  margin: 20px 0px;
+  font-size: 20px;
+  }
+  .news_rbox h4{
+    font-weight: 500;
+    margin: 10px 0px;
+    color: #db2748;
+  }
+  
+  .news_rbox span{
+    font-weight: 600;
+    color: #e1002b;
+ 
+  }
+  .news_rbox p{
+    font-size: 18px;
+    margin: 20px 0px;
+    color: #db2748;
+
+
+  }
+
+.news_rbox .box1,
+.news_rbox .box2{
+  width: 100%;
+  border-bottom: 1px solid #9b9b9b;
+}
+.news_rbox .box3{
+  width: 100%;
+}
+
+
+/* main_06__________________________________________ */
+
+.sns{
+  text-align: center;
+  }
+
+.sns img{
+  display: inline-block;
+  margin: 0px 0;
+}
+.sns h2{
+  display: inline-block;
+  font-size: 50px;
+  color: #e1002b;
+  margin: 0px 20px;
+}
+.sns_box{
+  display: flex;
+  width: 100%;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* border: 1px solid #000; */
+}
+
+.snsbox{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 50px 50px;
+  overflow: hidden;
+}
+.snsbox:after{
+  content: '';
+  position: absolute;
+  display: block;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.snsbox:hover:after{
+  opacity: 0;
+}
+.snsbox .box1:after:hover{
+  transform:scale(0.8) ;
+}
+
+/* .snsbox:hover .box1 ,
+.snsbox:hover .box2,
+.snsbox:hover .box3{
+  transform:scale(0.8) ;
+} */
+
+
+.sns_box .box1{
+  background: url(../image/sns_01.png) no-repeat center;
+  /* background-color: #e1002b; */
+}
+.sns_box .box2{
+  background: url(../image/sns_02.png) no-repeat center;
+}
+.sns_box .box3{
+  background: url(../image/sns_03.png) no-repeat center;
+}
+
+
+
+
+
